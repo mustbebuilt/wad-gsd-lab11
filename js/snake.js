@@ -148,4 +148,4 @@ document.addEventListener("keydown", function(ev){
 		}
 })
 
-///////////////// game managment ///////////////
+///////////////// game management ///////////////
