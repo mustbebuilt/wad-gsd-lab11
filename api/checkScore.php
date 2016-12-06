@@ -1,10 +1,11 @@
 <?php
+//ini_set('display_errors', 1);
 header('Content-Type: application/json');
-require('../../../../includes/conn.inc.php'); 
+require('../includes/conn.inc.php'); 
 // Add SQL
-$sql = "---- ADD SQL --------";
-$highScoreQuery = $mysqli->query($sql);
-$highScoreRow = $highScoreQuery->fetch_assoc();
-$returnAr = array('highScore' => $highScoreRow['highScore']);
+$sql = "---";
+$stmt = $pdo->query($sql);
+$highScoreRow = $stmt->fetchObject();
+$returnAr = array('highScore' => $highScoreRow->highScore);
 echo json_encode($returnAr);
 ?>
